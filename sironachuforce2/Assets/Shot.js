@@ -15,7 +15,7 @@ function Update () {
         if(time >= interval){
         //time（経過時間）がintervalを上回った
             Shot();
-            time = 0;   //初期化する
+            time = 0;   //初期化する do
         }
     }
 }
