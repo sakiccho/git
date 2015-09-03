@@ -3,9 +3,16 @@ public var spawn : Transform;   //Transform型変数spawnを宣言
 public var speed : float = 1000;//float型変数speedを宣言。同時に1000を代入
  
 public var rifle : Transform;   //修正箇所。銃オブジェクトのTransformを参照にする
-public var interval : float = 0.3;  //何秒おきに
+public var interval : float = 0.07;  //何秒おきに
 private var time : float = 0;   //経過時間
+
+public var sound : AudioSource; //AudioSourceコンポーネント
+public var shotSound : AudioClip;   //発砲音を代入
  
+function Start () {
+    sound = this.gameObject.GetComponent(AudioSource);  //AudioSourceコンポーネントを代入
+}
+
 //毎フレーム実行される
 function Update () {
     time += Time.deltaTime; //タイムを加算
@@ -22,6 +29,7 @@ function Update () {
  
 //Shot関数
 function Shot (){
+	sound.PlayOneShot(shotSound);
     var obj : GameObject = GameObject.Instantiate(bullet);  //GameObject型変数objを宣言
     obj.transform.position = spawn.position;                //objに代入されたオブジェクトの位置をspawnオブジェクトに合わせる
     obj.GetComponent.<Rigidbody>().AddForce(transform.forward * speed);         //修正点

@@ -3,6 +3,9 @@ private var isQuitting : boolean = false;   //ゲーム終了後のオブジェ�
 public var explosion : GameObject;  //爆発エフェクト
 public var Score : ScoreSystem; //スコアシステムを使用する
  
+public var sound : AudioSource; //AudioSourceコンポーネント
+public var explosionSound : AudioClip; 
+ 
 function Start () {
     Score = GameObject.Find("ScoreSystem").GetComponent("ScoreSystem");
 }
@@ -20,6 +23,7 @@ function OnApplicationQuit () {
 //削除される際に実行
 function OnDestroy () {
     if(!isQuitting){
+    	sound.PlayOneShot(explosionSound);
         Instantiate(explosion, transform.position, Quaternion.identity);    //爆発エフェクトを生成
         Score.AddScore(score);  //修正箇所
     }

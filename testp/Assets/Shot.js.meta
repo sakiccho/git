@@ -1,10 +1,15 @@
 fileFormatVersion: 2
 guid: 5a05ddfe2b827452292c7bde269d4117
-timeCreated: 1440932956
+timeCreated: 1441259994
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bullet: {instanceID: 0}
+  - spawn: {instanceID: 0}
+  - rifle: {instanceID: 0}
+  - sound: {instanceID: 0}
+  - shotSound: {fileID: 8300000, guid: 47062b2a2479b4a5dbc657ef109a30e4, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
