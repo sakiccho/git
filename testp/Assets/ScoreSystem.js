@@ -11,7 +11,9 @@ function AddScore ( addScore : float ){
 function Subtract ( subScore : float) {
     score -= subScore;
 }
- 
+ var style : GUIStyle;	
 function OnGUI () {
-    GUI.Label(Rect(10,10,100,100),"Score: "+score);
+	style.fontSize = 30;
+	style.normal.textColor = Color.white;
+    GUI.Label(Rect(10,10,100,100),"Score: "+score, style);
 }

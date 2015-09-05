@@ -13,5 +13,6 @@ function OnTriggerEnter (col : Collider) {
     }else if(col.gameObject.tag == "Enemy"){
         //落下した物が敵の時
         //Destroy(col.gameObject);    //落下したオブジェクトを削除
+        EnemySpawn.enemyCount -= 1;
     }
 }

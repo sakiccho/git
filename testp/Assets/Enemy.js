@@ -23,8 +23,9 @@ function OnApplicationQuit () {
 //削除される際に実行
 function OnDestroy () {
     if(!isQuitting){
-    	sound.PlayOneShot(explosionSound);
+   	sound.PlayOneShot(explosionSound);
         Instantiate(explosion, transform.position, Quaternion.identity);    //爆発エフェクトを生成
-        Score.AddScore(score);  //修正箇所
+        Score.AddScore(score);  //修正箇所\
+        EnemySpawn.enemyCount -= 1;
     }
 }
