@@ -12,5 +12,5 @@ function Update () {
     var direction : Vector3;    //向きを代入
     direction = playerPos - transform.position;
     transform.position = ( transform.position - ( direction.normalized * speed * Time.deltaTime));
-    transform.LookAt(-playerPos);    //プレイヤーの方を向く
+    transform.LookAt(playerPos);    //プレイヤーの方を向く
 }

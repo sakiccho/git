@@ -1,13 +1,13 @@
 fileFormatVersion: 2
 guid: 5a05ddfe2b827452292c7bde269d4117
-timeCreated: 1441536704
+timeCreated: 1441259994
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
-  - bullet: {fileID: 190932, guid: f2532f11ed9fe443cb46bf361349b8eb, type: 2}
-  - spawn: {fileID: 489646, guid: c666858cbf51848c4a8b6e79f753081e, type: 2}
-  - rifle: {fileID: 423336, guid: 1c43cd93c33f546b0bd0e32f6128631d, type: 2}
+  - bullet: {instanceID: 0}
+  - spawn: {instanceID: 0}
+  - rifle: {instanceID: 0}
   - sound: {instanceID: 0}
   - shotSound: {fileID: 8300000, guid: 47062b2a2479b4a5dbc657ef109a30e4, type: 3}
   executionOrder: 0
