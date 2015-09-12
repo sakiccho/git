@@ -16,30 +16,23 @@ function Start () {
 function Damage ( damage : float ){
     life -= damage;
     sound.PlayOneShot(hitSound);
-     
     if(life <= 0){
+    EnemySpawn.enemyCount -= 1;
         //体力が0以下になった時
         Dead(); //死亡処理を実行
     }
 }
 //やられた時に呼び出す。
 function Dead () {
-    Instantiate(explosion, transform.position, Quaternion.identity);    //爆発エフェクトを生成
-    Score.AddScore(score);  //スコアを加算
-    Destroy(this.gameObject);   //自身を削除
+    if(!isQuitting){
+	    Instantiate(explosion, transform.position, Quaternion.identity);    //爆発エフェクトを生成
+	    Score.AddScore(score);  //スコアを加算
+	    Destroy(this.gameObject);   //自身を削除
+    }
 }
  
 function OnApplicationQuit () {
 //ゲームは終了しているか
     isQuitting = true;
-}
- 
-//削除される際に実行
-function OnDestroy () {
-    if(!isQuitting){
-        Instantiate(explosion, transform.position, Quaternion.identity);    //爆発エフェクトを生成
-        Score.AddScore(score);  //修正箇所\
-        EnemySpawn.enemyCount -= 1;
-    }
 }
 
