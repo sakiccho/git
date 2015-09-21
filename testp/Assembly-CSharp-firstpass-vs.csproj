@@ -98,6 +98,7 @@
      <Compile Include="Assets\Standard Assets\Utility\TimedObjectDestructor.cs" />
      <Compile Include="Assets\Standard Assets\Utility\WaypointCircuit.cs" />
      <Compile Include="Assets\Standard Assets\Utility\WaypointProgressTracker.cs" />
+     <None Include="Assets\Scorpion\Shaders\reflect_ill.shader" />
      <None Include="Assets\02.Object\PQAssets\Query-Chan-SD\license_jp.txt" />
      <None Include="Assets\Destroyed_city_FREE\Destroyed_city_FREE_Info.txt" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />

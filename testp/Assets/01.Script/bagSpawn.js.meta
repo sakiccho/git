@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 83afc535239114aa289c0b61754e6066
+timeCreated: 1442822915
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - ground: {instanceID: 0}
+  - enemy: {fileID: 126212, guid: b9e8bd25decd6402199fab2cba98dbe0, type: 2}
+  - boss: {instanceID: 0}
+  - bSpawn: {fileID: 428834, guid: dd0309110717b441b82277e2eb238d4f, type: 2}
+  - scorpion: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
