@@ -3,15 +3,17 @@ private var isQuitting : boolean = false;   //ゲーム終了後のオブジェ�
 public var explosion : GameObject;  //爆発エフェクト
 public var Score : ScoreSystem; //スコアシステムを使用する
 public var life : float = 30;   //敵の体力
- 
+public var bossLife : float = 1000;   //敵の体力
 public var sound : AudioSource; //AudioSourceコンポーネント
 public var hitSound : AudioClip; 
+public var interval : float = 3;
+private var timer : float;
 
 function Start () {
     Score = GameObject.Find("ScoreSystem").GetComponent("ScoreSystem");
     sound = this.gameObject.GetComponent(AudioSource);
 }
- 
+
  //Dmage関数
 function Damage ( damage : float ){
     life -= damage;
@@ -20,6 +22,12 @@ function Damage ( damage : float ){
     EnemySpawn.enemyCount -= 1;
         //体力が0以下になった時
         Dead(); //死亡処理を実行
+    }
+    if(EnemySpawn.bossCount == 1){
+    	bossLife -= damage;
+    }
+	if(bossLife == 0){
+        Application.LoadLevel("GameClear"); //load clear scene
     }
 }
 //やられた時に呼び出す。

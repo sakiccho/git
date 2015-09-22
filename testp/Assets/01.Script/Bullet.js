@@ -7,7 +7,7 @@ function Update (){
  
 //IsTriggerがOnの時何かにぶつかったら実行する。
 function OnTriggerEnter ( col : Collider ) {
-    if(col.gameObject.tag == "Enemy"){
+    if(col.gameObject.tag == "Enemy" || col.gameObject.tag == "Boss"){
     //ぶつかったオブジェクトのTagがEnemyだった場合実行
         col.gameObject.SendMessage("Damage", attack);   //相手のDamage関数を実行する。
     }

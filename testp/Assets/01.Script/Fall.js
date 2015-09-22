@@ -1,5 +1,5 @@
 ﻿public var System : ScoreSystem;
-public var subScore : float = 10;   //落下した際の減点
+public var subScore : float = 30;   //落下した際の減点
  
 function Start () {
     System = GameObject.Find("ScoreSystem").GetComponent(ScoreSystem);  //スコアシステムを代入

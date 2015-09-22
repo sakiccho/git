@@ -3,20 +3,22 @@ public var interval : float = 6;//何秒おきに敵を発生させるか
 public var count : float = 2;   //一度にスポーンさせる敵の数
 public var enemy : GameObject;  //敵オブジェクト
 public var boss : GameObject;
-static public var enemyCount : int;	//enemy count on field
+static public var enemyCount : int = 0;	//enemy count on field
+static public var bossCount : int = 0;
 public var totalEnemy : int = 0;
-public var bossCount : int = 0;
+
 private var isQuitting : boolean = false;   //ゲーム終了後のオブジェクト生成回避
  
 function Start () {
+enemyCount = 0;
     Spawn();    //初期スポーン
     
 }
  
 function Update () {
-    if(enemyCount <= 0 && totalEnemy <= 5){
+    if(enemyCount <= 0 && totalEnemy <= 10){
         Spawn();
-    } else if(totalEnemy > 5 && enemyCount == 0) {
+    } else if(totalEnemy > 10 && enemyCount == 0) {
     	bossSpawn();
     }
 }

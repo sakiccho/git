@@ -1,5 +1,5 @@
-﻿public final var maxLife : float = 100; //最大体力・final修飾子をつけることで、変数を変更できなくなる。
-public var life : float = 100;          //現在体力
+﻿public final var maxLife : float = 150; //最大体力・final修飾子をつけることで、変数を変更できなくなる。
+public var life : float = 150;          //現在体力
  
 function Start () {
     life = maxLife; //体力を全回復
@@ -23,12 +23,12 @@ function Dead () {
  
 //ゲームオーバー処理
 function GameOver () {
-    Application.LoadLevel(Application.loadedLevel); //現在のシーンを再読込する
+    Application.LoadLevel("GameOver"); //現在のシーンを再読込する
 }
  var style : GUIStyle;	
 function OnGUI () {
 	style.fontSize = 40;
-	if(life >= 30){
+	if(life >= 50){
 		style.normal.textColor = Color.green;
 		} else {
 		style.normal.textColor = Color.red;

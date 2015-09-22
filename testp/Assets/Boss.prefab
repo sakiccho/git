@@ -18,7 +18,7 @@ GameObject:
   - 114: {fileID: 11411200}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -795,8 +795,10 @@ MonoBehaviour:
   explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
   Score: {fileID: 0}
   life: 1000
+  bossLife: 1000
   sound: {fileID: 0}
   hitSound: {fileID: 8300000, guid: cd9a63f3eb32c4485996cdefca2be51c, type: 3}
+  interval: 3
 --- !u!114 &11411200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -949,7 +951,19 @@ Prefab:
       objectReference: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
     - target: {fileID: 0}
       propertyPath: score
-      value: 0
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: life
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: bossLife
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

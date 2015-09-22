@@ -1,4 +1,4 @@
-﻿private var score : float = 0;  //スコア初期化
+﻿static public var score : float = 0;  //スコア初期化
  
 function Start () {
     score = 0;  //スコア初期化
